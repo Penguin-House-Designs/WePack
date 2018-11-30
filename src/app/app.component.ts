@@ -23,6 +23,15 @@ import {style, animate, transition, trigger } from '@angular/animations';
       transition(':leave', [   // :leave is alias to '* => void'
         animate(500, style({opacity:0})) 
       ])
+    ]),
+    trigger('loaderAnimate2', [
+      transition(':enter', [   // :enter is alias to 'void => *'
+        style({height:0}),
+        animate('0.2s 7s ease-in-out') 
+      ]),
+      transition(':leave', [   // :leave is alias to '* => void'
+        animate(500, style({display:'content'})) 
+      ])
     ])
   ]
 })
