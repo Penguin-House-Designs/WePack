@@ -38,4 +38,5 @@ import {style, animate, transition, trigger } from '@angular/animations';
 export class AppComponent {
 
   title = 'wepack';
+
 }
