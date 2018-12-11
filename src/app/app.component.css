@@ -185,6 +185,8 @@
     align-items: center;
     background: rgba(0, 0, 0, .75);
     color: white;
+    position: relative;
+    top: 50%;
     animation: no-font-size 7s ease-in-out 0.2s 1;
 }
 
@@ -266,7 +268,21 @@
 /* Services */
 /* Services */
 
-
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  
+  .column img {
+    /* vertical-align: middle; */
+  }
+  
 
 .services{
     width: 100%;
@@ -277,6 +293,8 @@
     align-items: center;
     background:rgba(255,255,255, 0.75);
     color: #595959;
+    position: relative;
+    top: 50%;
     animation: no-font-size 7s ease-in-out 0.2s 1;
 }
 
