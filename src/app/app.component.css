@@ -826,9 +826,11 @@
     .overlay-text {
         font-size: 16px;
     }
-    .column {
-        flex: 100%;
-        max-width: 100%;
+    .spacer1-background {
+        background-attachment: scroll;
+    }
+    .spacer2-background {
+        background-attachment: scroll;
     }
 }
 
