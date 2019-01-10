@@ -24,7 +24,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	font-family: 'Cormorant', serif;
 	font-weight: 400;
+	scroll-behavior: smooth;
+	  
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -33,6 +37,12 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
+body a {
+	color:white !important;
+	text-decoration:none;
+}
+
 ol, ul {
 	list-style: none;
 }

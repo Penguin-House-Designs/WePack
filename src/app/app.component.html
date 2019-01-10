@@ -4,10 +4,11 @@
 </div>
 
 <div [ngClass]="{'menu_on': menu_show,'menu_off':menu_hide}" class='menu'>
-  <div class='moblie-menu-links'>About</div>
-  <div class='moblie-menu-links'>Services</div>
-  <div class='moblie-menu-links'>Gallery</div>
-  <div class='moblie-menu-links'>Contact Us</div>
+  <a href='#about' (click)='closeMenu()' class='moblie-menu-links'>About</a>
+  <a href='#services' (click)='closeMenu()' class='moblie-menu-links'>Services</a>
+  <a href='#' (click)='closeMenu()' class='moblie-menu-links'>Gallery</a>
+  <a href='#contact' (click)='closeMenu()' class='moblie-menu-links'>Contact Us</a>
+  <a href="tel:4356496369" (click)='closeMenu()' class='moblie-menu-links'>Call Now</a>
   <div class='moblie-menu-close'>
     <img (click)='closeMenu()' class='down-up' src="../assets/img/down-arrow.png">
   </div>
@@ -22,13 +23,13 @@
   </div>
   <div class='nav-bar-desktop' [@scrollAnimation]="state">
     <div *ngIf="state == 'show'" class='nav-bar-links words'>
-      <div>About</div>
-      <div>Services</div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
     </div>
     <div *ngIf="state == 'show'" class='nav-bar-links'><img class='nav-bar-logo' src="../assets/img/WePack_FinalLogo_White-01.png"></div>
     <div *ngIf="state == 'show'" class='nav-bar-links words'>
-      <div>Gallery</div>
-      <div>Contact Us</div>
+      <a href="#">Gallery</a>
+      <a href="#contact">Contact Us</a>
     </div>
   </div>
   <div class='nav-bar-mobile' [@scrollAnimation]="state">
@@ -38,7 +39,7 @@
 </div>
 
 
-<div class='spacer' [@loaderAnimate2]>
+<div id='about' class='spacer' [@loaderAnimate2]>
   <div class='spacer1-background' [@loaderAnimate2]>
     <div class='aboutUs' [@loaderAnimate2]>
       <div class='about-contain'>
@@ -48,20 +49,19 @@
         <br>
         <br>
         <div>
-          WePack is a safe and secure way to relocate you comfortably to wherever you need to be.
-          With over 20 years of expertise, WePack provides moving service that provides all-inclusive amenities from
-          eco-conscious,
-          recycled packing supplies to art transportation/re-installation to private car transportation nationwide.
-          Moving internationally? No problem. Our services can be customized to our clients’ specific needs.
+          WePack moving & logistics is your preferred local, national, and international relocation expert,
+          a reputation we have worked hard to earn and consistently maintain for the last 20 years.
+          Since 1997 WePack has provided industry-leading moving and relocation services.
         </div>
         <div>
           <br>
           <br>
-          Based out of Park City, Utah, WePack offers consultations to customize packing,
-          moving and/or transportation programs.
-          Priding ourselves on flexibility and driven by specified client needs,
-          our company has partnered with a collection of high-end,
-          quality independent agents to deliver exceptional service.
+          Based out of Park City, Utah, WePack oversees a nationwide network of highly trained independent providers.
+          WePack understands that a successful move is more than just delivering a client's possessions to their final
+          destination.
+          We earn the trust of our valued clients by creating an unparalleled comfort level during the moving process
+          while at the same time
+          understanding the importance of being accountable in every facet of the service delivery process.
         </div>
       </div>
     </div>
@@ -69,62 +69,204 @@
 </div>
 
 
+<div id='services' class="spacer2" [@loaderAnimate2]>
+  <div class="spacer2-background">
+    <div class="service-section">
+      <div class="services-head">
+        <h1>Services</h1>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-<div class='spacer' [@loaderAnimate2]>
-  <div class='spacer2-background' [@loaderAnimate2]>
-    <div class='services' [@loaderAnimate2]>
-      <div class='services-contain'>
-        <div class='services-head'>
-          <h1>Services</h1>
-        </div>
-        <br>
-        <br>
-        <div>
-          WePack is a safe and secure way to relocate you comfortably to wherever you need to be.
-          With over 20 years of expertise, WePack provides moving service that provides all-inclusive amenities from
-          eco-conscious,
-          recycled packing supplies to art transportation/re-installation to private car transportation nationwide.
-          Moving internationally? No problem. Our services can be customized to our clients’ specific needs.
-        </div>
-        <div>
+<div class='services-spacer' >
+  <div class="row" [@loaderAnimate2]>
+    <div class="img-container img-001">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Packing & Unpacking</h1>
+          </div>
           <br>
           <br>
-          Based out of Park City, Utah, WePack offers consultations to customize packing,
-          moving and/or transportation programs.
-          Priding ourselves on flexibility and driven by specified client needs,
-          our company has partnered with a collection of high-end,
-          quality independent agents to deliver exceptional service.
+          <div>
+            Why trust two guys from the phonebook when you can trust us and our highly trained, fast-pace team to do
+            it for you.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-container img-004">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Moving</h1>
+          </div>
+          <br>
+          <br>
+          <div>
+            Managing thousands of projects nationally and internationally a year, WePack is committed to seamless
+            logistics when it comes to relocating. This is allows clients a stress-free experience.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-container img-007">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Supplies</h1>
+          </div>
+          <br>
+          <br>
+          <div>
+            WePack prides itself on being a green business. We will provide our clients with recycled supplies or new
+            supplies
+            depending on their preference.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-container img-002">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Storage (short-term & long-term)</h1>
+          </div>
+          <br>
+          <br>
+          <div>
+            We understand storage may be needed when it comes to relocating.
+            Storage arrangements can be easily met along with the necessary security levels.
+            WePack has partnered with high standard storage facilities that can also cater to cars or other large
+            vehicles
+            as well.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-container img-005">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Crating & Uncrating</h1>
+          </div>
+          <br>
+          <br>
+          <div>
+            If cardboard boxes don't cut it for some of your home's treasures, then crating and uncrating services
+            can be provided onsite and off.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-container img-006">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Vehicle Transportation</h1>
+          </div>
+          <br>
+          <br>
+          <div>
+            Arranged transport of cars, SUVs, and other vehicles can be done in a timely manner. Transportation can
+            be included in custom programs.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-container img-003">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Fine Art Removal & Installation</h1>
+          </div>
+          <br>
+          <br>
+          <div>
+            Specialized artwork removal, transportation/protection and reinstallation can be included.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-container img-008">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Home Staging</h1>
+          </div>
+          <br>
+          <br>
+          <div>
+            The job doesn't end when your belongings are delivered. At your request, our team can assemble your
+            furniture and move them to the desired locations. Our staging services provide a seemless and stress-free
+            transition
+            into your new home.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img-container img-009">
+      <div class="services-overlay">
+        <div class="overlay-text">
+          <div class="overlay-head">
+            <h1>Piano Transport</h1>
+          </div>
+          <br>
+          <br>
+          <div>
+            WePack
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<footer id='contact' class="footer" [@loaderAnimate2]>
 
+  <div class="footer-left">
 
-<div class='footer' [@loaderAnimate2]>
-  <div class='footer-contain'>
-    <div class='footer-head'>
-      <h1>Footer</h1>
-    </div>
-    <br>
-    <br>
-    <div>
-      WePack is a safe and secure way to relocate you comfortably to wherever you need to be.
-      With over 20 years of expertise, WePack provides moving service that provides all-inclusive amenities from
-      eco-conscious,
-      recycled packing supplies to art transportation/re-installation to private car transportation nationwide.
-      Moving internationally? No problem. Our services can be customized to our clients’ specific needs.
-    </div>
-    <div>
-      <br>
-      <br>
-      Based out of Park City, Utah, WePack offers consultations to customize packing,
-      moving and/or transportation programs.
-      Priding ourselves on flexibility and driven by specified client needs,
-      our company has partnered with a collection of high-end,
-      quality independent agents to deliver exceptional service.
-    </div>
+    <h3>WePack moving & logistics</h3>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      ·
+      <a href="#about">About Us</a>
+      ·
+      <a href="#services">Services</a>
+      ·
+      <a href="#">Gallery</a>
+    </p>
+
+    <!-- <div class="footer-icons">
+
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+
+    </div> -->
+
   </div>
-</div>
+
+  <div class="footer-right">
+
+    <p>Contact Us</p>
+
+    <form>
+
+      <input [(ngModel)]='client.firstName' type="text" name="firstname" placeholder="Firstname" />
+      <input [(ngModel)]='client.lastName' type="text" name="lastname" placeholder="Lastname" />
+      <input [(ngModel)]='client.email' type="text" name="email" placeholder="Email" />
+      <textarea [(ngModel)]='client.message' name="message" placeholder="Note"></textarea>
+      <button (click)='sendEmail()'>Send</button>
+
+    </form>
+
+  </div>
+  <div class="logo-position">
+    <p class="footer-company-name">Copyright &copy; 2018 WePack moving & logistics LLC | Website designed & created by
+      Penguin House Designs LLC</p>
+  </div>
+</footer>
