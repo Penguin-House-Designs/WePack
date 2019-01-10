@@ -14,8 +14,8 @@ import { Http, Headers } from '@angular/http';
       state('hide', style({
         opacity: 1
       })),
-      transition('show => hide', [style({ opacity: 0 }), animate('800ms ease-in-out')]),
-      transition('hide => show', [style({ opacity: 1 }), animate('800ms ease-in-out')])
+      transition('show => hide', [animate('800ms ease-out')]),
+      transition('hide => show', [animate('800ms ease-in')])
     ]),
     trigger('loaderAnimate', [
       transition(':enter', [   // :enter is alias to 'void => *'
@@ -76,7 +76,7 @@ export class AppComponent {
 
     if (scrollPosition >= 20) {
       this.state = 'show'
-    } else {
+    } else if(scrollPosition < 20) {
       this.state = 'hide'
     }
 
