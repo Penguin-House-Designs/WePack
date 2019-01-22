@@ -12,12 +12,36 @@ app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '/dist', './WePack/index.html'))
 });
 
+var server = email.server.connect({ user: "", password: "", host: "smtp.gmail.com", port: 465, ssl: true });
 
 app.post('/sendmail', (req, res) => {
 
-    var server = email.server.connect({ user: "", password: "", host: "smtp.gmail.com", port: 465, ssl: true });
     console.log('email server connected');
-    console.log(req.body);
+
+    sendEmailUs(req.body, res);
+    sendEmailClient(req.body, res);
+
+
+})
+function sendEmailUs(para, res) {
+
+    let ourEmail = {
+        text: `From: ${para.firstName} ${para.lastName}
+        Message: ${para.message}`,
+        from: "Website Inquiry!",
+        to: '',
+        subject: para.email
+    }
+
+    server.send(ourEmail, function (err, message) {
+        if (err)
+            console.log(err);
+
+    }
+    );
+}
+
+function sendEmailClient(req, res) {
 
     let emailTemplate =
         `<html>
@@ -153,7 +177,7 @@ app.post('/sendmail', (req, res) => {
                     color: #404040;
                     font-family: Cormorant;" class="header">
                     <br>
-                                    Hi ${req.body.firstName}, 
+                                    Hi ${req.firstName}, 
                                 </td>
                             </tr>
         
@@ -194,7 +218,7 @@ app.post('/sendmail', (req, res) => {
     server.send({
         text: "",
         from: "",
-        to: req.body.email,
+        to: req.email,
         subject: 'Thank you for contacting us!',
         attachment:
             [
@@ -207,9 +231,8 @@ app.post('/sendmail', (req, res) => {
         else
             res.json({ success: true, msg: 'sent' });
     }
-    );
-
-});
+    )
+};
 
 app.listen(8000, () => {
     console.log("Successfully listening on : 8000")
