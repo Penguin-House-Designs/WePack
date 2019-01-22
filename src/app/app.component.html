@@ -39,9 +39,9 @@
 </div>
 
 
-<div id='about' class='spacer'>
-  <div class='spacer1-background'>
-    <div class='aboutUs'>
+<div id='about' class='spacer' lazy-load-images>
+  <div class='spacer1-background' >
+    <div class='aboutUs' >
       <div class='about-contain'>
         <div class='about-head'>
           <h1>About Us</h1>
@@ -69,7 +69,7 @@
 </div>
 
 
-<div id='services' class="spacer2">
+<div id='services' class="spacer2" lazy-load-images>
   <div class="spacer2-background">
     <div class="service-section">
       <div class="services-head">
@@ -80,144 +80,17 @@
 </div>
 
 <div class='services-spacer' >
-  <div class="row">
-    <div onclick='' class="img-container img-001">
-      <div onclick='' class="services-overlay">
+  <div class="row" lazy-load-images>
+    <div *ngFor="let service of servicesOBJ" class="img-container" [attr.data-background-src]=service.url>
+      <div class="services-overlay">
         <div class="overlay-text">
           <div class="overlay-head">
-            <h1>Packing & Unpacking</h1>
+            <h1>{{ service.title }}</h1>
           </div>
           <br>
           <br>
           <div>
-            Why trust two guys from the phonebook when you can trust us and our highly trained, fast-pace team to do
-            it for you.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div onclick='' class="img-container img-004">
-      <div onclick='' class="services-overlay">
-        <div class="overlay-text">
-          <div class="overlay-head">
-            <h1>Moving</h1>
-          </div>
-          <br>
-          <br>
-          <div>
-            Managing thousands of projects nationally and internationally a year, WePack is committed to seamless
-            logistics when it comes to relocating. This is allows clients a stress-free experience.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div onclick='' class="img-container img-007">
-      <div onclick='' class="services-overlay">
-        <div class="overlay-text">
-          <div class="overlay-head">
-            <h1>Supplies</h1>
-          </div>
-          <br>
-          <br>
-          <div>
-            WePack prides itself on being a green business. We will provide our clients with recycled supplies or new
-            supplies
-            depending on their preference.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div onclick='' class="img-container img-002">
-      <div onclick='' class="services-overlay">
-        <div class="overlay-text">
-          <div class="overlay-head">
-            <h1>Storage (short-term & long-term)</h1>
-          </div>
-          <br>
-          <br>
-          <div>
-            We understand storage may be needed when it comes to relocating.
-            Storage arrangements can be easily met along with the necessary security levels.
-            WePack has partnered with high standard storage facilities that can also cater to cars or other large
-            vehicles
-            as well.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div onclick='' class="img-container img-005">
-      <div onclick='' class="services-overlay">
-        <div class="overlay-text">
-          <div class="overlay-head">
-            <h1>Crating & Uncrating</h1>
-          </div>
-          <br>
-          <br>
-          <div>
-            If cardboard boxes don't cut it for some of your home's treasures, then crating and uncrating services
-            can be provided onsite and off.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div onclick='' class="img-container img-006">
-      <div onclick='' class="services-overlay">
-        <div class="overlay-text">
-          <div class="overlay-head">
-            <h1>Vehicle Transportation</h1>
-          </div>
-          <br>
-          <br>
-          <div>
-            Arranged transport of cars, SUVs, and other vehicles can be done in a timely manner. Transportation can
-            be included in custom programs.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div onclick='' class="img-container img-003">
-      <div onclick='' class="services-overlay">
-        <div class="overlay-text">
-          <div class="overlay-head">
-            <h1>Fine Art Removal & Installation</h1>
-          </div>
-          <br>
-          <br>
-          <div>
-            Specialized artwork removal, transportation/protection and reinstallation can be included.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div onclick='' class="img-container img-008">
-      <div onclick='' class="services-overlay">
-        <div class="overlay-text">
-          <div class="overlay-head">
-            <h1>Home Staging</h1>
-          </div>
-          <br>
-          <br>
-          <div>
-            The job doesn't end when your belongings are delivered. At your request, our team can assemble your
-            furniture and move them to the desired locations. Our staging services provide a seemless and stress-free
-            transition
-            into your new home.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div onclick='' class="img-container img-009">
-      <div onclick='' class="services-overlay">
-        <div class="overlay-text">
-          <div class="overlay-head">
-            <h1>Piano Transport</h1>
-          </div>
-          <br>
-          <br>
-          <div>
-            Pianos are expensive pieces of equipment that require the upmost care when it comes
-            to moving. WePack has partnerned with the best piano movers in the industry and also offers 
-            storage for these instruments in secure, climate controlled facilities.
+            {{ service.des }}
           </div>
         </div>
       </div>
@@ -225,7 +98,7 @@
   </div>
 </div>
 
-<footer id='contact' class="footer">
+<footer id='contact' class="footer" >
 
   <div class="footer-left">
 
@@ -240,15 +113,6 @@
       ·
       <a href="#">Gallery</a>
     </p>
-
-    <!-- <div class="footer-icons">
-
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-github"></i></a>
-
-    </div> -->
 
   </div>
 
