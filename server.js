@@ -3,8 +3,9 @@ const bodyParser = require('body-parser');
 const app = module.exports = express();
 const email = require('emailjs/email');
 const path = require('path');
+const compression = require('compression')
 
-
+app.use(compression())
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/dist/WePack'));
 app.get('*', function (req, res) {
