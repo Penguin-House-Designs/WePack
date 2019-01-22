@@ -26,8 +26,7 @@
 }
 
 .overlay {
-    position: absolute;
-    top: calc(20%-10%);
+    position: relative;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .75);
@@ -38,7 +37,6 @@
     font-weight: 400;
     font-size: 22px;
     z-index: 1;
-    animation: fade-font 2s ease-in-out 1;
 }
 
 .overlay-links {
@@ -224,20 +222,20 @@
     flex-direction: column;
     opacity: 0;
     color: #595959;
-    animation: turnOff2 7s ease 0s 1;
+    animation: turnOff2 4.2s ease 0s 1;
 }
 
 .loader-animation-text-1 {
     font-size: 65px;
     opacity: 0;
-    animation: turnOff 6s ease-in-out 0s 1;
+    animation: turnOff 3.2s ease-in-out 0s 1;
     /* @keyframes duration | timing-function | delay | iteration */
 }
 
 .loader-animation-text-2 {
     font-size: 80px;
     opacity: 0;
-    animation: turnOff 7s ease-in-out 3s 1;
+    animation: turnOff 4s ease-in-out 2.2s 1;
 }
 
 .left-padding {
@@ -297,7 +295,7 @@
     color: white;
     position: relative;
     top: 50%;
-    animation: no-font-size 7s ease-in-out 0.2s 1;
+    animation: no-size 4s ease-in-out 0.2s 1;
 }
 
 .about-head {
@@ -305,7 +303,7 @@
     font-size: 40px;
     font-weight: 800;
     border-bottom: 1px solid white;
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
     text-align: center;
 }
 
@@ -317,10 +315,10 @@
     align-content: space-around;
     padding: 10px;
     font-size: 18px;
-    animation: no-font-size 7s ease-in-out 0.2s 1;
+    animation: no-size 4s ease-in-out 0.2s 1;
 }
 
-@keyframes no-font-size {
+@keyframes no-size {
     0% {
         font-size: 0px;
         padding: 0;
@@ -356,7 +354,7 @@
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    animation: no-font-size 7s ease-in-out 0.2s 1;
+    animation: no-size 4s ease-in-out 0.2s 1;
     position: relative;
 }
 
@@ -365,7 +363,7 @@
     height: 70vh;
     display: flex;
     flex-wrap: wrap;
-    animation: no-font-size 7s ease-in-out 0.2s 1;
+    animation: no-size 4s ease-in-out 0.2s 1;
     position: relative;
 }
 
@@ -374,7 +372,7 @@
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    animation: no-font-size 7s ease-in-out 0.2s 1;
+    animation: no-size 4s ease-in-out 0.2s 1;
     position: relative;
     background-color: rgba(0, 0, 0, .9)
 }
@@ -422,7 +420,7 @@
     background-color: rgba(0, 0, 0, 0.75);
     position: relative;
     top: 65%;
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
 }
 
 .services-head {
@@ -430,7 +428,7 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid white;
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
 }
 
 .row {
@@ -439,13 +437,13 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
 }
 
 
 .img-container:hover .services-overlay {
     opacity: 1;
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
 }
 
 .img-container {
@@ -453,37 +451,8 @@
     min-height: 38vh;
     position: relative;
     filter: grayscale(50%);
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
     background-size: cover;
-    animation: no-font-size 7s ease-in 0.2s 1;
-}
-
-.img-001 {
-    background-image: url('../assets/img/packing.jpg')
-}
-.img-002 {
-    background-image: url('../assets/img/storage.jpg')
-}
-.img-003 {
-    background-image: url('../assets/img/white-glove-services-1.jpg')
-}
-.img-004 {
-    background-image: url('../assets/img/lifing-couch.jpg')
-}
-.img-005 {
-    background-image: url('../assets/img/stephane-yaich-644691-unsplash.jpg')
-}
-.img-006 {
-    background-image: url('../assets/img/josh-rinard-71760-unsplash.jpg')
-}
-.img-007 {
-    background-image: url('../assets/img/erda-estremera-581452-unsplash.jpg')
-}
-.img-008 {
-    background-image: url('../assets/img/staging.jpg')
-}
-.img-009 {
-    background-image: url('../assets/img/piano.jpg')
 }
 
 .services-overlay {
@@ -497,12 +466,12 @@
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(0, 0, 0, .75);
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
 }
 
 .overlay-head {
     font-size: 25px;
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
 }
 
 .overlay-text {
@@ -515,7 +484,7 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
 }
 
 .services {
@@ -529,7 +498,7 @@
     color: #595959;
     position: relative;
     top: 50%;
-    animation: no-font-size 7s ease-in-out 0.2s 1;
+    animation: no-size 4s ease-in-out 0.2s 1;
 }
 
 
@@ -541,7 +510,7 @@
     align-content: space-around;
     padding: 10px;
     font-size: 18px;
-    animation: no-font-size 7s ease-in-out 0.2s 1;
+    animation: no-size 4s ease-in-out 0.2s 1;
 }
 
 /* footer */
@@ -566,7 +535,7 @@
     padding: 50px 60px 40px;
     /* margin-top: 80px; */
     overflow: hidden;
-    animation: no-font-size 7s ease-in 0.2s 1;
+    animation: no-size 4s ease-in 0.2s 1;
 }
 
 /* Footer left */

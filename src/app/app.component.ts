@@ -2,6 +2,7 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 import { style, animate, state, transition, trigger } from '@angular/animations';
 import { Http, Headers } from '@angular/http';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,13 +15,13 @@ import { Http, Headers } from '@angular/http';
       state('hide', style({
         opacity: 1
       })),
-      transition('show => hide', [style({ opacity: 0 }), animate('800ms ease-in-out')]),
-      transition('hide => show', [style({ opacity: 1 }), animate('800ms ease-in-out')])
+      transition('show => hide', [animate('800ms ease-out')]),
+      transition('hide => show', [animate('800ms ease-in')])
     ]),
     trigger('loaderAnimate', [
       transition(':enter', [   // :enter is alias to 'void => *'
         style({ opacity: 0 }),
-        animate('1s 7s ease-in-out', style({ opacity: 1 }))
+        animate('1s 4s ease-in-out', style({ opacity: 1 }))
       ]),
       transition(':leave', [   // :leave is alias to '* => void'
         animate(500, style({ opacity: 0 }))
@@ -29,7 +30,7 @@ import { Http, Headers } from '@angular/http';
     trigger('loaderAnimate2', [
       transition(':enter', [   // :enter is alias to 'void => *'
         style({ height: 0 }),
-        animate('0.2s 7s ease-in-out')
+        animate('0.2s 4s ease-in-out')
       ]),
       transition(':leave', [   // :leave is alias to '* => void'
         animate(500, style({ display: 'content' }))
@@ -65,6 +66,78 @@ export class AppComponent {
     message: ''
   }
 
+  servicesOBJ = [
+    {
+      url: '../assets/img/back-img/Apacking.jpg',
+      show: false,
+      title: 'Packing & Unpacking',
+      des: `Why trust two guys from the phonebook when you can trust us and our highly trained, fast-pace team to do
+      it for you.`
+    },
+    {
+      url: '../assets/img/back-img/Blifing-couch.jpg',
+      show: false,
+      title: 'Moving',
+      des: `Managing thousands of projects nationally and internationally a year, WePack is committed to seamless
+      logistics when it comes to relocating. This is allows clients a stress-free experience.`
+    },
+    {
+      url: '../assets/img/back-img/Cerda-estremera-581452-unsplash.jpg',
+      show: false,
+      title: 'Supplies',
+      des: `WePack prides itself on being a green business. We will provide our clients with recycled supplies or new
+      supplies
+      depending on their preference.`
+    },
+    {
+      url: '../assets/img/back-img/Dstorage.jpg',
+      show: false,
+      title: 'Storage (short-term & long-term)',
+      des: `We understand storage may be needed when it comes to relocating.
+      Storage arrangements can be easily met along with the necessary security levels.
+      WePack has partnered with high standard storage facilities that can also cater to cars or other large
+      vehicles
+      as well.`
+    },
+    {
+      url: '../assets/img/back-img/Estephane-yaich-644691-unsplash.jpg',
+      show: false,
+      title: 'Crating & Uncrating',
+      des: `If cardboard boxes don't cut it for some of your home's treasures, then crating and uncrating services
+      can be provided onsite and off.`
+    },
+    {
+      url: '../assets/img/back-img/Fjosh-rinard-71760-unsplash.jpg',
+      show: false,
+      title: 'Vehicle Transportation',
+      des: `Arranged transport of cars, SUVs, and other vehicles can be done in a timely manner. Transportation can
+      be included in custom programs.`
+    },
+    {
+      url: '../assets/img/back-img/Gwhite-glove-services-1.jpg',
+      show: false,
+      title: 'Fine Art Removal & Installation',
+      des: `Specialized artwork removal, transportation/protection and reinstallation can be included.`
+    },
+    {
+      url: '../assets/img/back-img/Hstaging.jpg',
+      show: false,
+      title: 'Home Staging',
+      des: `The job doesn't end when your belongings are delivered. At your request, our team can assemble your
+      furniture and move them to the desired locations. Our staging services provide a seemless and stress-free
+      transition
+      into your new home.`
+    },
+    {
+      url: '../assets/img/back-img/Ipiano.jpg',
+      show: false,
+      title: 'Piano Transport',
+      des: `Pianos are expensive pieces of equipment that require the upmost care when it comes
+      to moving. WePack has partnerned with the best piano movers in the industry and also offers 
+      storage for these instruments in secure, climate controlled facilities.`
+    }
+  ]
+
   constructor(public el: ElementRef,
     private http: Http) {
 
@@ -76,7 +149,8 @@ export class AppComponent {
 
     if (scrollPosition >= 20) {
       this.state = 'show'
-    } else {
+    } 
+    else if (scrollPosition < 20) {
       this.state = 'hide'
     }
 
