@@ -27,7 +27,8 @@ function sendEmailUs(para, res) {
 
     let ourEmail = {
         text: `From: ${para.firstName} ${para.lastName}
-        Message: ${para.message}`,
+        Message: ${para.message}
+        Number: ${para.number}`,
         from: "Website Inquiry!",
         to: '',
         subject: para.email

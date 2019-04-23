@@ -64,6 +64,7 @@ export class AppComponent {
   client = {
     firstName: '',
     lastName: '',
+    number: '',
     email: '',
     message: ''
   }
@@ -173,12 +174,12 @@ export class AppComponent {
       this.menu_hide = false
     }, 900)
 
-    
+
   }
-  
+
 
   postDataToSheet() {
-    return this.http.get(`<google sheet id here>First_Name=${this.client.firstName}&Last_Name=${this.client.lastName}&Email_Address=${this.client.email}&Message=${this.client.message}`).subscribe();
+    return this.http.get(`<google sheet id here>First_Name=${this.client.firstName}&Last_Name=${this.client.lastName}&Number=${this.client.number}&Email_Address=${this.client.email}&Message=${this.client.message}`).subscribe();
   }
 
   sendEmail() {
@@ -220,6 +221,7 @@ export class AppComponent {
     let eObject = {
       firstName: newClient.firstName,
       lastName: newClient.lastName,
+      number: newClient.number,
       email: newClient.email,
       message: newClient.message,
       headers: headers
@@ -232,6 +234,7 @@ export class AppComponent {
         this.client = {
           firstName: '',
           lastName: '',
+          number: '',
           email: '',
           message: ''
         }
