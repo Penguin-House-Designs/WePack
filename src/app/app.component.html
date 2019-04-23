@@ -26,34 +26,37 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
     </div>
-    <div *ngIf="state == 'show'" class='nav-bar-links'><img class='nav-bar-logo' src="../assets/img/WePack_FinalLogo_White-01.png"></div>
+    <div *ngIf="state == 'show'" class='nav-bar-links'><img class='nav-bar-logo'
+        src="../assets/img/WePack_FinalLogo_White-01.png"></div>
     <div *ngIf="state == 'show'" class='nav-bar-links words'>
       <a href="#">Gallery</a>
       <a href="#contact">Contact Us</a>
     </div>
   </div>
   <div class='nav-bar-mobile' [@scrollAnimation]="state">
-    <div *ngIf="state == 'show'" class='nav-bar-links'><img class='nav-bar-logo' src="../assets/img/WePack_FinalLogo_White-01.png"></div>
-    <div (click)='menu_show = true' *ngIf="state == 'show'" class='nav-bar-links'><img class='down-arrow' src="../assets/img/down-arrow.png"></div>
+    <div *ngIf="state == 'show'" class='nav-bar-links'><img class='nav-bar-logo'
+        src="../assets/img/WePack_FinalLogo_White-01.png"></div>
+    <div (click)='menu_show = true' *ngIf="state == 'show'" class='nav-bar-links'><img class='down-arrow'
+        src="../assets/img/down-arrow.png"></div>
   </div>
 </div>
 
 
 <div id='about' class='spacer' lazy-load-images>
-  <div class='spacer1-background' >
-    <div class='aboutUs' >
+  <div class='spacer1-background'>
+    <div class='aboutUs'>
       <div class='about-contain'>
         <div class='about-head'>
           <h1>About Us</h1>
         </div>
         <br>
         <br>
-        <div>
+        <p>
           WePack moving & logistics is your preferred local, national, and international relocation expert,
           a reputation we have worked hard to earn and consistently maintain for the last 20 years.
           Since 1997 WePack has provided industry-leading moving and relocation services.
-        </div>
-        <div>
+        </p>
+        <p>
           <br>
           <br>
           Based out of Park City, Utah, WePack oversees a nationwide network of highly trained independent providers.
@@ -62,12 +65,70 @@
           We earn the trust of our valued clients by creating an unparalleled comfort level during the moving process
           while at the same time
           understanding the importance of being accountable in every facet of the service delivery process.
-        </div>
+        </p>
       </div>
     </div>
   </div>
 </div>
 
+
+
+<div class="why-wepack">
+  <div class="why-sections">
+
+    <div class="why-top why-img">
+      <div class="why-top-content">
+        <h1>Why WePack</h1>
+        <p>
+          Relocating is a tremendous ordeal so why do it yourself when our team of professionals can do it for you? With
+          premium care just a call away, the responsibility of our team is to provide you with an unparalleled service.
+          We've got you covered.
+          <br>
+          <br>
+          So Relax...
+
+        </p>
+      </div>
+
+    </div>
+    <div class="why-top benefits-img">
+      <div class="why-top-content">
+        <h1>Benefits</h1>
+        <p>
+          Think personal assistant but better. WePack provides skills like critical thinking, problem solving,
+          flexibility and more to help you take care of little odds and ends that you’d normally forget.
+          No matter how odd or unusual the request may be, we’re here to give you peace of mind.
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="why-sections">
+    <div class="why-top commercial-img">
+      <div class="why-top-content">
+        <h1>Commercial Relocation</h1>
+        <p>
+          Ensure that your new workspace creates a comfortable and encouraging environment for happy, productive, and
+          focused employees. Our priority is to organize and execute a stress-free transition for not only you and your
+          business but for your employees and their families as well.
+        </p>
+      </div>
+    </div>
+    <div class="why-top residential-img">
+      <div class="why-top-content">
+        <h1>Residential Relocation</h1>
+        <p>
+          From packing to shipping to donating unwanted things; WePack can handle it all.
+          Home staging is your friend, and so are we. We're here to help you find the perfect interior decorater, home
+          entertainment technician, or kitchen and storage organization specialist, so you can be seamlessly relocated
+          and
+          settled in on your schedule.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <div id='services' class="spacer2" lazy-load-images>
   <div class="spacer2-background">
@@ -79,7 +140,7 @@
   </div>
 </div>
 
-<div class='services-spacer' >
+<div class='services-spacer'>
   <div class="row" lazy-load-images>
     <div *ngFor="let service of servicesOBJ" class="img-container" [attr.data-background-src]=service.url>
       <div class="services-overlay">
@@ -89,20 +150,20 @@
           </div>
           <br>
           <br>
-          <div>
+          <p>
             {{ service.des }}
-          </div>
+          </p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<footer id='contact' class="footer" >
+<footer id='contact' class="footer">
 
   <div class="footer-left">
 
-    <h3>WePack moving & logistics</h3>
+    <h1>WePack moving & logistics</h1>
 
     <p class="footer-links">
       <a href="#">Home</a> ·
@@ -121,6 +182,7 @@
 
       <input [(ngModel)]='client.firstName' type="text" name="firstname" placeholder="Firstname" />
       <input [(ngModel)]='client.lastName' type="text" name="lastname" placeholder="Lastname" />
+      <input [(ngModel)]='client.number' type="text" name="number" placeholder="Phone Number" />
       <input [(ngModel)]='client.email' type="text" name="email" placeholder="Email" />
       <textarea [(ngModel)]='client.message' name="message" placeholder="Note"></textarea>
       <button (click)='sendEmail()'>Send</button>
@@ -129,7 +191,7 @@
 
   </div>
   <div class="logo-position">
-    <p class="footer-company-name">Copyright &copy; 2018 WePack moving & logistics LLC | Website designed & created by
+    <p class="footer-company-name">Copyright &copy; 2019 WePack moving & logistics LLC | Website designed & created by
       Penguin House Designs LLC</p>
   </div>
 </footer>
