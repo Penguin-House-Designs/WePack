@@ -8,7 +8,7 @@
   <a href='#services' (click)='closeMenu()' class='moblie-menu-links'>Services</a>
   <a href='#' (click)='closeMenu()' class='moblie-menu-links'>Gallery</a>
   <a href='#contact' (click)='closeMenu()' class='moblie-menu-links'>Contact Us</a>
-  <a href="" (click)='closeMenuCall()' class='moblie-menu-links'>Call Now</a>
+  <a  (click)='closeMenuCall()' class='moblie-menu-links'>Call Now</a>
   <div class='moblie-menu-close'>
     <img (click)='closeMenu()' class='down-up' src="../assets/img/down-arrow.png">
   </div>
@@ -33,10 +33,10 @@
       <a href="#contact">Contact Us</a>
     </div>
   </div>
-  <div class='nav-bar-mobile' [@scrollAnimation]="state">
+  <div (click)='menu_show = true' class='nav-bar-mobile' [@scrollAnimation]="state">
     <div *ngIf="state == 'show'" class='nav-bar-links'><img class='nav-bar-logo'
         src="../assets/img/WePack_FinalLogo_White-01.png"></div>
-    <div (click)='menu_show = true' *ngIf="state == 'show'" class='nav-bar-links'><img class='down-arrow'
+    <div  *ngIf="state == 'show'" class='nav-bar-links'><img class='down-arrow'
         src="../assets/img/down-arrow.png"></div>
   </div>
 </div>
@@ -177,18 +177,18 @@
 
   <div class="footer-right">
 
-    <p>Send a message or give us a call at <a href="tel:"></a></p>
+    <p>Send a message or give us a call at <a (click)='sendEmail()' href="tel:">num</a></p>
 
-    <form>
+    <div class='contact-form' >
 
       <input [(ngModel)]='client.firstName' type="text" name="firstname" placeholder="Firstname" />
       <input [(ngModel)]='client.lastName' type="text" name="lastname" placeholder="Lastname" />
       <input [(ngModel)]='client.number' type="text" name="number" placeholder="Phone Number" />
       <input [(ngModel)]='client.email' type="text" name="email" placeholder="Email" />
       <textarea [(ngModel)]='client.message' name="message" placeholder="Note"></textarea>
-      <button (click)='sendEmail()'>Send</button>
+      <div> <button (click)='sendEmail()'>Send</button> </div>
 
-    </form>
+    </div>
 
   </div>
   <div class="logo-position">
