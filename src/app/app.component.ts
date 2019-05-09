@@ -183,8 +183,9 @@ export class AppComponent {
   }
 
   sendEmail() {
-    this.postDataToSheet()
-    this.compileEmail(this.client)
+    console.log('inside email fun');
+    // this.postDataToSheet()
+    // this.compileEmail(this.client)
   }
 
   gtag_report_conversion_email(url) {
@@ -196,7 +197,7 @@ export class AppComponent {
     };
     gtag('event', 'conversion', {
       'send_to': '',
-      'event_callback': callback
+      // 'event_callback': callback
     });
     return false;
   }
@@ -210,7 +211,7 @@ export class AppComponent {
     };
     gtag('event', 'conversion', {
       'send_to': '',
-      'event_callback': callback
+      // 'event_callback': callback
     });
     return false;
   }

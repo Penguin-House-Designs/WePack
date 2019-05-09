@@ -473,28 +473,28 @@
 }
 
 .why-img {
-    background-image: url('../assets/img/why-bg.jpeg');
+    background-image: url('../assets/img/why-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .benefits-img {
-    background-image: url('../assets/img/wpbenefits.jpeg');
+    background-image: url('../assets/img/wpbenefits.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .commercial-img {
-    background-image: url('../assets/img/wepack-commercial.jpeg');
+    background-image: url('../assets/img/wepack-commercial.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .residential-img {
-    background-image: url('../assets/img/shingles.jpeg');
+    background-image: url('../assets/img/shingles.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -744,11 +744,11 @@
 
 /* The contact form */
 
-.footer form {
+.footer .contact-form {
     display: inline-block;
 }
 
-.footer form input, .footer form textarea {
+.footer .contact-form input, .footer .contact-form textarea {
     display: block;
     border-radius: 3px;
     box-sizing: border-box;
@@ -777,17 +777,17 @@
     color: #5c666b;
 }
 
-.footer form input {
+.footer .contact-form input {
     height: 55px;
     margin-bottom: 15px;
 }
 
-.footer form textarea {
+.footer .contact-form textarea {
     height: 100px;
     margin-bottom: 20px;
 }
 
-.footer form button {
+.footer .contact-form button {
     border-radius: 3px;
     background-color: #33383b;
     color: #ffffff;
@@ -839,10 +839,10 @@
     .footer .footer-company-name {
         font-size: 12px;
     }
-    .footer form input, .footer form textarea {
+    .footer .contact-form input, .footer .contact-form textarea {
         width: 250px;
     }
-    .footer form button {
+    .footer .contact-form button {
         padding: 10px 35px;
     }
     .overlay-head {
@@ -868,13 +868,13 @@
     .footer .footer-left {
         margin-bottom: 40px;
     }
-    .footer form {
+    .footer .contact-form {
         margin-top: 30px;
     }
-    .footer form {
+    .footer .contact-form {
         display: block;
     }
-    .footer form button {
+    .footer .contact-form button {
         float: none;
     }
     .overlay-head {
