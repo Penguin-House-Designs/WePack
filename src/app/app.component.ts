@@ -59,9 +59,12 @@ export class AppComponent {
   menu_show = false
   menu_hide = false
 
+  url = 'https://wpmoving.com/'
+
   client = {
     firstName: '',
     lastName: '',
+    number: '',
     email: '',
     message: ''
   }
@@ -149,8 +152,7 @@ export class AppComponent {
 
     if (scrollPosition >= 20) {
       this.state = 'show'
-    } 
-    else if (scrollPosition < 20) {
+    } else if (scrollPosition < 20) {
       this.state = 'hide'
     }
 
@@ -164,13 +166,53 @@ export class AppComponent {
     }, 900)
   }
 
-  postDataToSheet() {
-    return this.http.get(`<google sheet id here>First_Name=${this.client.firstName}&Last_Name=${this.client.lastName}&Email_Address=${this.client.email}&Message=${this.client.message}`).subscribe();
+  closeMenuCall() {
+    this.gtag_report_conversion_mobile(this.url);
+    this.menu_hide = true
+    setTimeout(() => {
+      this.menu_show = false
+      this.menu_hide = false
+    }, 900)
+
+
   }
-  
+
+
+  postDataToSheet() {
+    return this.http.get(`<google sheet id here>First_Name=${this.client.firstName}&Last_Name=${this.client.lastName}&Number=${this.client.number}&Email_Address=${this.client.email}&Message=${this.client.message}`).subscribe();
+  }
+
   sendEmail() {
     this.postDataToSheet()
     this.compileEmail(this.client)
+  }
+
+  gtag_report_conversion_email(url) {
+    const gtag = window['gtag'];
+    let callback = () => {
+      if (typeof (url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': '',
+      'event_callback': callback
+    });
+    return false;
+  }
+
+  gtag_report_conversion_mobile(url) {
+    const gtag = window['gtag'];
+    let callback = () => {
+      if (typeof (url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': '',
+      'event_callback': callback
+    });
+    return false;
   }
 
   compileEmail(newClient) {
@@ -179,6 +221,7 @@ export class AppComponent {
     let eObject = {
       firstName: newClient.firstName,
       lastName: newClient.lastName,
+      number: newClient.number,
       email: newClient.email,
       message: newClient.message,
       headers: headers
@@ -191,9 +234,11 @@ export class AppComponent {
         this.client = {
           firstName: '',
           lastName: '',
+          number: '',
           email: '',
           message: ''
         }
+        this.gtag_report_conversion_email(this.url)
       }
     })
   }
