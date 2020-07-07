@@ -295,7 +295,7 @@
     color: white;
     position: relative;
     top: 50%;
-    animation: no-size 4s ease-in-out 0.2s 1;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
 }
 
 .about-head {
@@ -303,7 +303,7 @@
     font-size: 40px;
     font-weight: 800;
     border-bottom: 1px solid white;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
     text-align: center;
 }
 
@@ -315,7 +315,7 @@
     align-content: space-around;
     padding: 10px;
     font-size: 18px;
-    animation: no-size 4s ease-in-out 0.2s 1;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
 }
 
 @keyframes no-size {
@@ -343,7 +343,7 @@
     width: 100%;
     height: 5vh;
     background: black;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 /* Spacer */
@@ -363,7 +363,7 @@
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    animation: no-size 4s ease-in-out 0.2s 1;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
     position: relative;
 }
 
@@ -372,7 +372,7 @@
     height: 70vh;
     display: flex;
     flex-wrap: wrap;
-    animation: no-size 4s ease-in-out 0.2s 1;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
     position: relative;
 }
 
@@ -381,7 +381,7 @@
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    animation: no-size 4s ease-in-out 0.2s 1;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
     position: relative;
     background-color: rgba(0, 0, 0, .9)
 }
@@ -427,7 +427,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .why-sections {
@@ -438,14 +438,14 @@
     align-items: center;
     color: white;
     font-size: 18px;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .why-top {
     width: 36%;
     height: 100%;
     margin: 2%;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .why-top-content {
@@ -463,13 +463,13 @@
 .why-top h1 {
     font-size: 28px;
     width: 75%;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .why-top p {
     font-size: 16px;
     width: 75%;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .why-img {
@@ -556,7 +556,7 @@
     background-color: rgba(0, 0, 0, 0.75);
     position: relative;
     top: 65%;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .services-head {
@@ -564,7 +564,7 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid white;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .row {
@@ -573,12 +573,12 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .img-container:hover .services-overlay {
     opacity: 1;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .img-container {
@@ -586,7 +586,7 @@
     min-height: 38vh;
     position: relative;
     filter: grayscale(50%);
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
     background-size: cover;
 }
 
@@ -601,12 +601,12 @@
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(0, 0, 0, .75);
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .overlay-head {
     font-size: 25px;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .overlay-text {
@@ -619,7 +619,7 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 .services {
@@ -633,7 +633,7 @@
     color: #595959;
     position: relative;
     top: 50%;
-    animation: no-size 4s ease-in-out 0.2s 1;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
 }
 
 .services-contain {
@@ -644,7 +644,7 @@
     align-content: space-around;
     padding: 10px;
     font-size: 18px;
-    animation: no-size 4s ease-in-out 0.2s 1;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
 }
 
 /* footer */
@@ -669,7 +669,7 @@
     padding: 50px 60px 40px;
     /* margin-top: 80px; */
     overflow: hidden;
-    animation: no-size 4s ease-in 0.2s 1;
+    /* animation: no-size 4s ease-in 0.2s 1; */
 }
 
 /* Footer left */

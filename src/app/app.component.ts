@@ -18,24 +18,24 @@ import { Http, Headers } from '@angular/http';
       transition('show => hide', [animate('800ms ease-out')]),
       transition('hide => show', [animate('800ms ease-in')])
     ]),
-    trigger('loaderAnimate', [
-      transition(':enter', [   // :enter is alias to 'void => *'
-        style({ opacity: 0 }),
-        animate('1s 4s ease-in-out', style({ opacity: 1 }))
-      ]),
-      transition(':leave', [   // :leave is alias to '* => void'
-        animate(500, style({ opacity: 0 }))
-      ])
-    ]),
-    trigger('loaderAnimate2', [
-      transition(':enter', [   // :enter is alias to 'void => *'
-        style({ height: 0 }),
-        animate('0.2s 4s ease-in-out')
-      ]),
-      transition(':leave', [   // :leave is alias to '* => void'
-        animate(500, style({ display: 'content' }))
-      ])
-    ]),
+    // trigger('loaderAnimate', [
+    //   transition(':enter', [   // :enter is alias to 'void => *'
+    //     style({ opacity: 0 }),
+    //     animate('1s 1s ease-in-out', style({ opacity: 1 }))
+    //   ]),
+    //   transition(':leave', [   // :leave is alias to '* => void'
+    //     animate(500, style({ opacity: 0 }))
+    //   ])
+    // ]),
+    // trigger('loaderAnimate2', [
+    //   transition(':enter', [   // :enter is alias to 'void => *'
+    //     style({ height: 0 }),
+    //     animate('0.2s 4s ease-in-out')
+    //   ]),
+    //   transition(':leave', [   // :leave is alias to '* => void'
+    //     animate(500, style({ display: 'content' }))
+    //   ])
+    // ]),
     trigger('scrollAnimation', [
       state('show', style({
         opacity: 1,
