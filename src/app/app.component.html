@@ -6,11 +6,11 @@
 <div [ngClass]="{'menu_on': menu_show,'menu_off':menu_hide}" class='menu'>
   <a href='#about' (click)='closeMenu()' class='moblie-menu-links'>About</a>
   <a href='#services' (click)='closeMenu()' class='moblie-menu-links'>Services</a>
-  <a href='#' (click)='closeMenu()' class='moblie-menu-links'>Gallery</a>
+  <a href='#why' (click)='closeMenu()' class='moblie-menu-links'>Why WePack</a>
   <a href='#contact' (click)='closeMenu()' class='moblie-menu-links'>Contact Us</a>
   <a  (click)='closeMenuCall()' class='moblie-menu-links'>Call Now</a>
   <div class='moblie-menu-close'>
-    <img (click)='closeMenu()' class='down-up' src="../assets/img/down-arrow.png">
+    <img (click)='closeMenu()' class='down-up' src="../assets/img/down-arrow.png" alt="Mobile Menu">
   </div>
 </div>
 
@@ -19,7 +19,8 @@
     <source src="../assets/video/wepackvideo.mp4" type="video/mp4">
   </video>
   <div [@fadeInOut]="state" class='overlay'>
-    <div class='overlay-links'><img class='overlay-logo' src="../assets/img/WePack_FinalLogo_White-01.png"></div>
+    <div class='overlay-links'><img class='overlay-logo' src="../assets/img/WePack_FinalLogo_White-01.png"
+        alt="Park City's Premier Moving Company"></div>
   </div>
   <div class='nav-bar-desktop' [@scrollAnimation]="state">
     <div *ngIf="state == 'show'" class='nav-bar-links words'>
@@ -27,17 +28,17 @@
       <a href="#services">Services</a>
     </div>
     <div *ngIf="state == 'show'" class='nav-bar-links'><img class='nav-bar-logo'
-        src="../assets/img/WePack_FinalLogo_White-01.png"></div>
+        src="../assets/img/WePack_FinalLogo_White-01.png" alt="Park City's Premier Moving Company"></div>
     <div *ngIf="state == 'show'" class='nav-bar-links words'>
-      <a href="#">Gallery</a>
+      <a href="#why">Why WePack</a>
       <a href="#contact">Contact Us</a>
     </div>
   </div>
   <div (click)='menu_show = true' class='nav-bar-mobile' [@scrollAnimation]="state">
     <div *ngIf="state == 'show'" class='nav-bar-links'><img class='nav-bar-logo'
         src="../assets/img/WePack_FinalLogo_White-01.png"></div>
-    <div  *ngIf="state == 'show'" class='nav-bar-links'><img class='down-arrow'
-        src="../assets/img/down-arrow.png"></div>
+    <div (click)='menu_show = true' *ngIf="state == 'show'" class='nav-bar-links'><img class='down-arrow'
+        src="../assets/img/down-arrow.png" alt="Mobile Menu"></div>
   </div>
 </div>
 
@@ -52,35 +53,39 @@
         <br>
         <br>
         <p>
-          WePack moving & logistics is your preferred local, national, and international relocation expert,
-          a reputation we have worked hard to earn and consistently maintain for the last 20 years.
-          Since 1997 WePack has provided industry-leading moving and relocation services.
+          WePack moving & logistics is your preferred local, national, and international moving company based out of
+          Park City, Utah. Since 1997, WePack has worked hard to provide industry-leading moving and relocation
+          services.
         </p>
         <p>
           <br>
           <br>
-          Based out of Park City, Utah, WePack oversees a nationwide network of highly trained independent providers.
-          WePack understands that a successful move is more than just delivering a client's possessions to their final
-          destination.
+          WePack oversees a nationwide network of highly trained independent providers who understand that a successful
+          move is more than just delivering a client's possessions to their final destination.
           We earn the trust of our valued clients by creating an unparalleled comfort level during the moving process
-          while at the same time
-          understanding the importance of being accountable in every facet of the service delivery process.
+          while at the same time understanding the importance of being accountable in every facet of the service
+          delivery process.
         </p>
       </div>
+      <!-- <div class="green-utah">
+        <img class='green-img' src="../assets/img/Green-Business-Logo-Update-300x300.png" alt="">
+        <p>WePack moving & logistics is a proud
+          <br>Recycle Utah Green Bussiness.</p>
+      </div> -->
     </div>
   </div>
 </div>
 
 
 
-<div class="why-wepack">
+<div id='why' class="why-wepack">
   <div class="why-sections">
 
     <div class="why-top why-img">
       <div class="why-top-content">
         <h1>Why WePack</h1>
         <p>
-          Relocating is a tremendous ordeal so why do it yourself when our team of professionals can do it for you? With
+          Moving is a tremendous ordeal so why do it yourself when our team of professionals can do it for you? With
           premium care just a call away, the responsibility of our team is to provide you with an unparalleled service.
           We've got you covered.
           <br>
@@ -193,6 +198,6 @@
   </div>
   <div class="logo-position">
     <p class="footer-company-name">Copyright &copy; 2019 WePack moving & logistics LLC | Website designed & created by
-      Penguin House Designs LLC</p>
+      <a href="www.phdesigns.io" target="_blank">Penguin House Designs LLC</a></p>
   </div>
 </footer>

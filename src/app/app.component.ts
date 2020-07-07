@@ -127,17 +127,17 @@ export class AppComponent {
       show: false,
       title: 'Home Staging',
       des: `The job doesn't end when your belongings are delivered. At your request, our team can assemble your
-      furniture and move them to the desired locations. Our staging services provide a seemless and stress-free
+      furniture and move them to your desired locations. Our staging services provide a seemless and stress-free
       transition
       into your new home.`
     },
     {
       url: '../assets/img/back-img/Ipiano.jpg',
       show: false,
-      title: 'Piano Transport',
-      des: `Pianos are expensive pieces of equipment that require the upmost care when it comes
-      to moving. WePack has partnerned with the best piano movers in the industry and also offers 
-      storage for these instruments in secure, climate controlled facilities.`
+      title: 'Piano Moving',
+      des: `Pianos are expensive pieces of equipment that require the utmost care when it comes
+      to moving. WePack is partnered with the best piano movers in the industry and also offers 
+      storage for these instruments in secure, climate-controlled facilities.`
     }
   ]
 
