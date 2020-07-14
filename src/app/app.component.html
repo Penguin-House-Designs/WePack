@@ -9,6 +9,10 @@
   </div>
 </div>
 
+<div href="tel:" class='call-now-mobile' >
+  <i class="fa fa-phone icon" aria-hidden="true"></i>
+</div>
+
 <div class='background'>
 
   <video *ngIf="true" class='video-size' onloadedmetadata="this.muted = true" playsinline autoplay muted loop>
@@ -27,7 +31,6 @@
               <option value="In State">In State</option>
               <option value="Out of State">Out of State</option>
             </select>
-            <input class='quote-inputs' [(ngModel)]='quote.zip' type="text" name="lastname" placeholder="Zip Code" />
             <select class='quote-select'  value="Moving Size" name="type" id="type" [(ngModel)]='quote.size' >
               <option value="">Moving Size</option>
               <option value="Townhouse">Townhouse</option>
@@ -38,6 +41,7 @@
               <option value="Other">Other</option>
             </select>
             <input class='quote-inputs' [(ngModel)]='quote.when' type="month" name="number"  />
+            <input class='quote-inputs' [(ngModel)]='quote.zip' type="text" name="lastname" placeholder="Zip Code" />
             <input class='quote-inputs' [(ngModel)]='quote.name' type="text" name="email" placeholder="Name" />
             <input class='quote-inputs' [(ngModel)]='quote.number' type="text" name="number" placeholder="Phone Number" />
             <input class='quote-inputs' [(ngModel)]='quote.email' type="text" name="email" placeholder="Email" />
