@@ -10,6 +10,26 @@
     font-size: 36px;
 }
 
+.call-now-mobile{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    position: fixed;
+    border: 1px solid white;
+    border-radius: 100%;
+    top: 90%;
+    left: calc(90% - 50px);
+    z-index: 9999999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    font-size: 32px;
+    color: white;
+}
+
 .video-size {
     position: absolute;
     z-index: 0;
@@ -54,7 +74,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 3px;
 }
@@ -587,6 +607,9 @@
     .why-top h1 {
         font-size: 22px;
         width: 80%;
+    }
+    .call-now-mobile{
+        display: flex;
     }
 }
 
