@@ -17,12 +17,13 @@
     position: fixed;
     border: 1px solid white;
     border-radius: 100%;
-    top: 90%;
+    top: 88%;
     left: calc(90% - 50px);
     z-index: 9999999;
     display: none;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .icon{
@@ -49,7 +50,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .75);
+    background: transparent;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -72,16 +73,29 @@
 .get-quote-wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.6);
     padding: 10px;
     border-radius: 3px;
+    width: 65%;
+    height: 70%;
+    min-width: 320px;
+}
+
+.overlay-logo {
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+    background: url(../assets/img/WePack_FinalLogo_White-01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .quote-header{
     width: 270px;
-    font-size: 20px;
+    font-size: 22px;
     color: white;
     background: transparent;
     padding: 3px;
@@ -94,9 +108,9 @@
     font-size: 16px;
     border: 1px solid rgba(0, 0, 0, 0.753);
     border-radius: 3px;
-    color: white;
-    background: transparent;
-    padding: 3px 6px;
+    color: #5c666b;
+    background: white;
+    padding: 6px 6px;
     margin: 3px;
 }
 
@@ -105,14 +119,14 @@
     font-size: 16px;
     border: 1px solid rgba(0, 0, 0, 0.753);
     border-radius: 3px;
-    color: white;
-    background: transparent;
-    padding: 3px;
+    color: #5c666b;
+    background: white;
+    padding: 6px 7px;
     margin: 3px;
 }
 
 .quote-inputs::placeholder {
-    color: white;
+    color: #5c666b;
 }
 
 .nav-bar-desktop {
@@ -238,10 +252,6 @@
     100% {
         opacity: 1;
     }
-}
-
-.overlay-logo {
-    width: 270px;
 }
 
 .nav-bar-logo {
@@ -719,10 +729,6 @@
         opacity: 0;
     }
 
-    .overlay-logo {
-        width: 130px;
-    }
-
 }
 
 .overlay-head {
@@ -856,16 +862,22 @@
 }
 
 .footer .footer-right p {
-    display: inline-block;
-    vertical-align: top;
-    margin: 15px 42px 0 0;
     font-size: 25px;
     color: #ffffff;
 }
 
 /* The contact form */
 
-.footer .contact-form {
+.contact-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    margin: 10px;
+}
+
+/* .footer .contact-form {
     display: inline-block;
 }
 
@@ -916,7 +928,7 @@
     padding: 15px 50px;
     font-weight: bold;
     float: right;
-}
+} */
 
 .logo-position {
     position: relative;
@@ -960,12 +972,6 @@
     .footer .footer-company-name {
         font-size: 12px;
     }
-    .footer .contact-form input, .footer .contact-form textarea {
-        width: 250px;
-    }
-    .footer .contact-form button {
-        padding: 10px 35px;
-    }
     .overlay-head {
         font-size: 20px;
     }
@@ -988,15 +994,6 @@
     }
     .footer .footer-left {
         margin-bottom: 40px;
-    }
-    .footer .contact-form {
-        margin-top: 30px;
-    }
-    .footer .contact-form {
-        display: block;
-    }
-    .footer .contact-form button {
-        float: none;
     }
     .overlay-head {
         font-size: 18px;
@@ -1089,5 +1086,46 @@
     .aboutUs {
         height: 65vh;
         top: 35%;
+    }
+
+}
+
+
+@media only screen and (max-width: 330px) {
+
+    .get-quote-wrapper{
+        padding: 10px 10px;
+        border-radius: 3px;
+        height: 85%;
+        min-width: 290px;
+    }
+    
+    .overlay-logo {
+        width: 100px;
+        margin: 10px;
+    }
+    
+    .quote-header{
+        width: 270px;
+        font-size: 22px;
+        color: white;
+        background: transparent;
+        padding: 3px;
+        margin: 3px;
+        text-align: center;
+    }
+    
+    .quote-inputs{
+        width: 270px;
+        font-size: 14px;
+        padding: 4px 4px;
+        margin: 3px;
+    }
+    
+    .quote-select{
+        width: 281px;
+        font-size: 14px;
+        padding: 4px 6px;
+        margin: 3px;
     }
 }
