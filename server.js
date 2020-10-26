@@ -26,9 +26,12 @@ app.post('/sendmail', (req, res) => {
 function sendEmailUs(para, res) {
 
     let ourEmail = {
-        text: `From: ${para.firstName} ${para.lastName}
-        Message: ${para.message}
-        Number: ${para.number}`,
+        text: `From: ${para.name}
+        Number: ${para.number}
+        Type of move: ${para.type}
+        Size of move: ${para.size}
+        Zipcode: ${para.zip}
+        Move date: ${para.when}`,
         from: "Website Inquiry!",
         to: '',
         subject: para.email
@@ -178,7 +181,7 @@ function sendEmailClient(req, res) {
                     color: #404040;
                     font-family: Cormorant;" class="header">
                     <br>
-                                    Hi ${req.firstName}, 
+                                    Hi ${req.name}, 
                                 </td>
                             </tr>
         

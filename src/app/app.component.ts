@@ -171,7 +171,7 @@ export class AppComponent {
 
 
   postDataToSheet() {
-    return this.http.get(`<google sheet id here>First_Name=${this.client.firstName}&Last_Name=${this.client.lastName}&Number=${this.client.number}&Email_Address=${this.client.email}&Message=${this.client.message}`).subscribe();
+    return this.http.get(`<google sheet id here>Name=${this.quote.name}&Number=${this.quote.number}&Email_Address=${this.quote.email}&When=${this.quote.when}&Move_Size=${this.quote.size}&Move_Type=${this.quote.type}&Zipcode=${this.quote.zip}`).subscribe();
   }
 
   sendEmail() {
@@ -182,10 +182,10 @@ export class AppComponent {
 
   sendQuote() {
     console.log('inside quote fun');
-    console.log('quote',this.quote);
-    
-    // this.postDataToSheet()
-    // this.compileEmail(this.client)
+    console.log('quote', this.quote);
+
+    this.postDataToSheet()
+    // this.compileEmail(this.quote)
   }
 
   gtag_report_conversion_email(url) {
@@ -220,11 +220,13 @@ export class AppComponent {
     console.log('inside compileemail')
     let headers = new Headers();
     let eObject = {
-      firstName: newClient.firstName,
-      lastName: newClient.lastName,
+      name: newClient.name,
       number: newClient.number,
       email: newClient.email,
-      message: newClient.message,
+      type: newClient.type,
+      size: newClient.size,
+      zip: newClient.zip,
+      when: newClient.when,
       headers: headers
     };
     headers.append('Content-Type', 'application/X-www-form-urlencoded');
@@ -232,12 +234,14 @@ export class AppComponent {
     return this.http.post('/sendmail', eObject).subscribe((data) => {
       if (data.json().success) {
         console.log('Sent successfully');
-        this.client = {
-          firstName: '',
-          lastName: '',
+        this.quote = {
+          type: '',
+          zip: '',
+          size: '',
+          when: '2020-12',
+          name: '',
           number: '',
-          email: '',
-          message: ''
+          email: ''
         }
         this.gtag_report_conversion_email(this.url)
       }
