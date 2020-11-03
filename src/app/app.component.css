@@ -397,17 +397,18 @@
 }
 
 .green-utah {
-  width: 30%;
+  width: 100%;
   height: 20%;
   display: flex;
-  font-size: 18px;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 16px;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  color: white;
   /* animation: no-size 4s ease-in-out 0.2s 1; */
 }
 
 .green-img {
-  width: 90px;
+  width: 75px;
   height: auto;
   /* animation: no-size 4s ease-in-out 0.2s 1; */
 }
@@ -999,6 +1000,21 @@
   }
   .overlay-text {
     font-size: 14px;
+  }
+  .green-utah {
+    flex-direction: column;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
+  }
+
+  .green-img {
+    width: 60px;
+    height: auto;
+    padding-bottom: 20px;
+    /* animation: no-size 4s ease-in-out 0.2s 1; */
   }
 }
 
