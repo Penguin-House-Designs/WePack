@@ -132,14 +132,14 @@ export class AppComponent {
     }
   ]
 
-  constructor(private window: Window, public el: ElementRef,
+  constructor(public el: ElementRef,
     private http: Http) {
 
   }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const scrollPosition = this.window.pageYOffset
+    const scrollPosition = window.pageYOffset
 
     if (scrollPosition >= 20) {
       this.state = 'show'
