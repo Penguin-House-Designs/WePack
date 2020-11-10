@@ -1,4 +1,4 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef , Inject} from '@angular/core';
 import { style, animate, state, transition, trigger } from '@angular/animations';
 import { Http, Headers } from '@angular/http';
 
@@ -132,14 +132,14 @@ export class AppComponent {
     }
   ]
 
-  constructor(public el: ElementRef,
+  constructor(private window: Window, public el: ElementRef,
     private http: Http) {
 
   }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const scrollPosition = window.pageYOffset
+    const scrollPosition = this.window.pageYOffset
 
     if (scrollPosition >= 20) {
       this.state = 'show'
@@ -189,10 +189,10 @@ export class AppComponent {
   }
 
   gtag_report_conversion_email(url) {
-    const gtag = window['gtag'];
+    const gtag = this.window['gtag'];
     let callback = () => {
       if (typeof (url) != 'undefined') {
-        window.location = url;
+        this.window.location = url;
       }
     };
     gtag('event', 'conversion', {
@@ -203,10 +203,10 @@ export class AppComponent {
   }
 
   gtag_report_conversion_mobile(url) {
-    const gtag = window['gtag'];
+    const gtag = this.window['gtag'];
     let callback = () => {
       if (typeof (url) != 'undefined') {
-        window.location = url;
+        this.window.location = url;
       }
     };
     gtag('event', 'conversion', {
