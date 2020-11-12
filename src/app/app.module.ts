@@ -1,5 +1,3 @@
-import { NgtUniversalModule } from '@ng-toolkit/universal';
-import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -11,16 +9,14 @@ import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
   declarations: [
     AppComponent
   ],
-  imports:[
- CommonModule,
-NgtUniversalModule,
- 
-    
+  imports: [
+    BrowserModule,
     BrowserAnimationsModule,
     LazyLoadImagesModule,
     FormsModule,
     HttpModule
   ],
   providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
