@@ -1,6 +1,8 @@
+import { WINDOW } from '@ng-toolkit/universal';
 import { Component, HostListener, ElementRef , Inject} from '@angular/core';
 import { style, animate, state, transition, trigger } from '@angular/animations';
 import { Http, Headers } from '@angular/http';
+
 
 @Component({
   selector: 'app-root',
@@ -132,14 +134,14 @@ export class AppComponent {
     }
   ]
 
-  constructor(public el: ElementRef,
+  constructor(@Inject(WINDOW) private window: Window, public el: ElementRef,
     private http: Http) {
 
   }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const scrollPosition = window.pageYOffset
+    const scrollPosition = this.window.pageYOffset
 
     if (scrollPosition >= 20) {
       this.state = 'show'
@@ -177,14 +179,13 @@ export class AppComponent {
     console.log('inside email fun');
     // this.postDataToSheet()
     // this.compileEmail(this.client)
-    
   }
 
   sendQuote() {
     console.log('inside quote fun');
     console.log('quote', this.quote);
 
-    // this.postDataToSheet()
+    this.postDataToSheet()
     // this.compileEmail(this.quote)
   }
 
