@@ -72,8 +72,8 @@
 
 .get-quote-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
   align-items: center;
   background: rgba(0, 0, 0, 0.6);
   padding: 10px;
@@ -81,6 +81,31 @@
   width: 65%;
   height: 70%;
   min-width: 320px;
+}
+
+.home-overlay-call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  justify-content: space-evenly;
+  background: black;
+  padding: 30px;
+  border: 3px solid white;
+}
+
+.home-overlay-call h1 {
+  font-size: 30px;
+}
+
+.home-overlay-call a {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.home-overlay-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .overlay-logo {
@@ -116,7 +141,7 @@
 }
 
 .quote-select {
-  width: 281px;
+  width: 284px;
   font-size: 16px;
   border: 1px solid rgba(0, 0, 0, 0.753);
   border-radius: 3px;
@@ -980,6 +1005,21 @@
 }
 
 @media (max-width: 800px) {
+  .get-quote-wrapper {
+    flex-direction: column;
+    height: 80%;
+  }
+  .home-overlay-call h1 {
+    display: none;
+  }
+
+  .home-overlay-call a {
+    display: none;
+  }
+  .home-overlay-call {
+    height: auto;
+    padding: 10px;
+  }
   .img-container {
     width: 100%;
   }
