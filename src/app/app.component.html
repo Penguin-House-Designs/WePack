@@ -57,6 +57,45 @@
         </div>
     </div>
 
+    <div class='home-overlay-mobile'>
+
+        <div class='home-overlay-links'>
+            <div class='get-quote-wrapper'>
+                <!-- <img  class='overlay-logo' src="../assets/img/WePack_FinalLogo_White-01.png" > -->
+                <div class="home-overlay-call" [@fadeInOut]="state">
+                    <div class='overlay-logo' alt="Park City's Premier Moving Company"></div>
+                    <h1>Give us a call:</h1>
+                    <a href="tel:"></a>
+                </div>
+                <div class="home-overlay-form">
+                    <h2 class='quote-header'>Tell Us About Your Move</h2>
+                    <!-- <label for="type">Choose a car:</label> -->
+                    <select class='quote-select' value="Type of move" name="type" id="type" [(ngModel)]='quote.type'>
+                      <option value="">Type of move</option>
+                      <option value="In State">In-state</option>
+                      <option value="Out of State">Out-of-state</option>
+                    </select>
+                    <select class='quote-select' value="Moving Size" name="type" id="type" [(ngModel)]='quote.size'>
+                      <option value="">Size of move</option>
+                      <option value="House">House</option>
+                      <option value="Townhouse">Townhouse</option>
+                      <option value="Apartment">Apartment</option>
+                      <option value="Business">Business</option>
+                      <option value="Storage">Storage</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <input class='quote-inputs' [(ngModel)]='quote.when' type="month" name="number" />
+                    <input class='quote-inputs' [(ngModel)]='quote.zip' type="text" name="lastname" placeholder="Zip Code" />
+                    <input class='quote-inputs' [(ngModel)]='quote.name' type="text" name="name" placeholder="Name" />
+                    <input class='quote-inputs' [(ngModel)]='quote.number' type="text" name="number" placeholder="Phone Number" />
+                    <input class='quote-inputs' [(ngModel)]='quote.email' type="text" name="email" placeholder="Email" />
+                    <button class='quote-select' (click)='sendQuote()'>Get A Free Quote</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
