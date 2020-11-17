@@ -2,6 +2,7 @@ import { Component, HostListener, ElementRef } from '@angular/core';
 import { style, animate, state, transition, trigger } from '@angular/animations';
 import { Http, Headers } from '@angular/http';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -177,14 +178,13 @@ export class AppComponent {
     console.log('inside email fun');
     // this.postDataToSheet()
     // this.compileEmail(this.client)
-    
   }
 
   sendQuote() {
     console.log('inside quote fun');
     console.log('quote', this.quote);
 
-    // this.postDataToSheet()
+    this.postDataToSheet()
     // this.compileEmail(this.quote)
   }
 
