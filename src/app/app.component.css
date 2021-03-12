@@ -156,6 +156,17 @@
   font-family: auto;
 }
 
+.quote-select-button {
+  width: 284px;
+  font-size: 16px;
+  border: 1px solid white;
+  color: white;
+  background: black;
+  padding: 6px 7px;
+  margin: 3px;
+  font-family: auto;
+}
+
 .quote-inputs::placeholder {
   color: #5c666b;
 }
@@ -1195,6 +1206,12 @@
   }
 
   .quote-select {
+    width: 281px;
+    font-size: 14px;
+    padding: 4px 6px;
+    margin: 3px;
+  }
+  .quote-select-button {
     width: 281px;
     font-size: 14px;
     padding: 4px 6px;
